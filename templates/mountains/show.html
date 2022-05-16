@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="layouts/layout :: layout(~{::title}, ~{::section})">
+<head>
+    <meta charset="utf-8">
+    <title>Mountaineering :: Mountain</title>
+</head>
+<body>
+<section>
+    <div class="container mt-5">
+        <div class="row">
+
+            <!-- TODO: add the condition when the message should be displayed and set the message text -->
+            <div class="alert alert-danger" role="alert" ></div>
+
+            <!-- TODO: add the correct condition to display/not to display the following -->
+            <div >
+                <!-- TODO: set the title - the format should be "Name - Height (Difficult Level)", e.g. "El Capitan - 2308m (level 3)" -->
+                <h1 class="my-2 mb-4" ></h1>
+
+                <!-- TODO: add the right condition(s) here to display one of the following: -->
+                <p class="text" >
+                    <!-- TODO: add a correctly formatted date, e.g. 26-Nov-2021 -->
+                    Peak first reached on <span >dd-MMM-yyyy</span>
+                </p>
+                <p class="text" >Peak has never been reached</span></p>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Nationality</th>
+                            <th>Altitude</th>
+                            <th>Injured</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- TODO: loop to display all climbers -->
+                        <tr >
+                            <td >Name</td>
+                            <td >Nationality</td>
+                            <td >Altitude</td>
+                            <td >true/false</td>
+                        </tr>
+                        <!-- TODO: add the condition to display the "No climbers" text -->
+                        <tr >
+                            <td colspan="4" class="text-center">No climbers</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

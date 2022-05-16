@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="layouts/layout :: layout(~{::title}, ~{::section})">
+<head>
+    <meta charset="utf-8">
+    <title>Mountaineering</title>
+</head>
+<body>
+<section>
+    <div class="container mt-5">
+        <div class="row">
+
+            <!-- TODO: add the condition when the message should be displayed and set the message text -->
+            <div  class="alert alert-danger" role="alert" ></div>
+
+            <!-- TODO: add the condition when the message should be displayed and set the message text -->
+            <div  class="alert alert-success" role="alert" ></div>
+
+            <h1 class="my-2 mb-4">Mountaineering</h1>
+
+            <h2 class="mt-4">Climbers overview</h2>
+            <div class="px-2 my-2 mb-4">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Nationality</th>
+                            <th>Mountain</th>
+                            <th>Altitude</th>
+                            <th>Injured</th>
+                            <th>Rescue</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- TODO: loop to display all climbers; make sure to print the correct data in each column -->
+                        <tr >
+                            <td >Name</td>
+                            <td >Nationality</td>
+                            <td>
+                                <!-- TODO: set the correct URL -->
+                                <a href="/mountains/{id}" >Mountain Name</a>
+                            </td>
+                            <td >Altitude</td>
+                            <td >true/false</td>
+                            <td>
+                                <!-- TODO: add the correct conditions so that *one* of the following is displayed -->
+                                <!-- TODO: set the correct URL -->
+                                <span >N/A</span>
+                                <a href="/climbers/{id}/rescue}">rescue</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 class="mt-2">Climb a mountain</h2>
+
+            <!-- TODO: add form action and method -->
+            <form action="" method="">
+                <div class="mb-3 row">
+                    <label for="id" class="col-sm-2 col-form-label">Climber</label>
+                    <div class="col-sm-10">
+                        <select id="id" name="id" class="form-select">
+                            <!-- TODO: loop to display all climbers; use the climber id as the value, and the climber name as the text -->
+                            <option value="{id}" >Name</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="distance" class="col-sm-2 col-form-label">Distance</label>
+                    <div class="col-sm-10">
+                        <input type="number" min="0" class="form-control" id="distance" name="distance">
+                    </div>
+                </div>
+                <div class="mb-3 col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+
+            <h2>Add new climber</h2>
+
+            <!-- TODO: add form action and method -->
+            <form action="" method="">
+                <div class="mb-3 row">
+                    <label for="name" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="type" class="form-control" id="name" name="name">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="nationality" class="col-sm-2 col-form-label">Nationality</label>
+                    <div class="col-sm-10">
+                        <input type="type" class="form-control" id="nationality" name="nationality">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="mountain-id" class="col-sm-2 col-form-label">Mountain</label>
+                    <div class="col-sm-10">
+                        <select id="mountain-id" name="mountain-id" class="form-select">
+                            <!-- TODO: loop to display all mountains; use the mountain id as the value, and the mountain name as the text -->
+                            <option value="{id}" >Mountain Name</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-3 col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+
+
